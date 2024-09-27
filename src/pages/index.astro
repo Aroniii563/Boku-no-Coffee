@@ -1,14 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Fondo from "../img/logotipo.png"
 
 ---
 
 <Layout title="Boku no Coffee">
 	<main>
-
+		<section id="inicio">
+			<div class="present">
+				<img src={Fondo.src} alt="fondo">
+			</div>
+			<h1>Bienvenido</h1>
+		</section>
 	</main>
 </Layout>
 
 <style>
+
+	main{
+		display: flex;
+		justify-content: center;
+	}
+
+	.present img{
+		width: 70%;
+		filter: opacity(50%);
+		position: relative;
+	}
+
+	#inicio h1{
+		position: absolute;
+		top: 140%;
+		left: 25%;
+		color: white;
+		font-size: 150px;
+		animation: roll 2s infinite ease-in;
+	}
+
+	@keyframes roll{
+		0%{
+			filter: drop-shadow(1px 2px 10px aqua);
+		}
+		25%{
+			filter: drop-shadow(1px 2px 10px #725fd1);
+		}
+		50%{
+			filter: drop-shadow(1px 2px 10px violet);
+		}
+		75%{
+			filter: drop-shadow(1px 2px 10px pink);
+		}
+		100%{
+			filter: drop-shadow(1px 2px 10px #f8cc85);
+		}
+	}
 
 </style>
