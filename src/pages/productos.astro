@@ -7,9 +7,6 @@ import Botellas from "../img/bebidas.png";
 	<main>
 		<section id="comida">
 			<div>
-				<img src="" alt="comidas">
-			</div>
-			<div>
 				<h1>Comidas</h1>
 			</div>
 		</section>
@@ -19,9 +16,6 @@ import Botellas from "../img/bebidas.png";
 			</div>
 		</section>
 		<section id="dulce">
-			<div>
-				<img src="" alt="dulces">
-			</div>
 			<div>
 				<h1>Postres y dulces</h1>
 			</div>
@@ -37,10 +31,56 @@ import Botellas from "../img/bebidas.png";
 			top: 200px;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			flex-wrap: wrap;
 		}
 		
 		section{
 			text-align: center;
+			margin-left: 30px;
+			transition: scale 0.5s ease-out;
+		}
+
+		section:hover{
+			scale: 1.05;
+			box-shadow: 10px 20px 0;
+		}
+
+		section h1{
+			margin: 0 auto;
+			padding-top: 65%;
+			font-size: 50px;
+			font-family: "Rajdhani", sans-serif;
+			cursor: pointer;
+			animation: colores 2s infinite ease-in-out;
+			color: white;
+		}
+
+		@keyframes colores{
+			0%{
+				filter: drop-shadow(5px 5px 2px aqua);
+			}
+			25%{
+				filter: drop-shadow(5px 5px 2px #725fd1);
+			}
+			50%{
+				filter: drop-shadow(5px 5px 2px violet);
+			}
+			75%{
+				filter: drop-shadow(5px 5px 2px pink);
+			}
+			100%{
+				filter: drop-shadow(5px 5px 2px #f8cc85);
+			}
+		}
+
+		#comida{
+			background-image: url(../img/comida.jpg);
+			background-size: 250%;
+			border-radius: 5px;
+			width: 75%;
+			height: 70vh;
+			filter: sepia(40%);
+			box-shadow: 10px 10px 0 #4fe543;
 		}
 
 		#bebida{
@@ -49,18 +89,18 @@ import Botellas from "../img/bebidas.png";
 			border-radius: 5px;
 			width: 75%;
 			height: 70vh;
-			filter: sepia(90%);
+			filter: sepia(60%);
+			box-shadow: 10px 10px 0 #FF5733;
 		}
 
-		#bebida:hover{
-			scale: 1.2;
-			box-shadow: 0 5px 5px black;
-			rotate: 5deg;
-		}
-
-		#bebida h1{
-			color: black;
-			animation: color;
+		#dulce{
+			background-image: url(../img/dulces.jpg);
+			background-size: 250%;
+			border-radius: 5px;
+			width: 75%;
+			height: 70vh;
+			filter: sepia(20%);
+			box-shadow: 10px 10px 0 #f65555;
 		}
 
 		@keyframes color 
