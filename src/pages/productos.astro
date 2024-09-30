@@ -2,8 +2,47 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout title="Boku no Coffee">
+<Layout title="Productos">
 	<main>
-	
+		<section>
+			<div>
+				<img src="" alt="comidas">
+			</div>
+			<div>
+				<h1>Comidas</h1>
+			</div>
+		</section>
+		<section>
+			<div>
+				<img src="../img/bebidas.png" alt="Bebidas">
+			</div>
+			<div>
+				<h1>Bebidas</h1>
+			</div>
+		</section>
+		<section>
+			<div>
+				<img src="" alt="dulces">
+			</div>
+			<div>
+				<h1>Postres y dulces</h1>
+			</div>
+		</section>
 	</main>
+
+	<style>
+
+		main{
+			position: relative;
+			top: 200px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			left: 10%;
+		}
+
+		div{
+			color: white;
+		}
+
+	</style>
 </Layout>
