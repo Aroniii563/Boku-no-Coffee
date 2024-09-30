@@ -1,10 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import Botellas from "../img/bebidas.png";
 ---
 
 <Layout title="Productos">
 	<main>
-		<section>
+		<section id="comida">
 			<div>
 				<img src="" alt="comidas">
 			</div>
@@ -12,15 +13,12 @@ import Layout from "../layouts/Layout.astro"
 				<h1>Comidas</h1>
 			</div>
 		</section>
-		<section>
-			<div>
-				<img src="../img/bebidas.png" alt="Bebidas">
-			</div>
+		<section id="bebida">
 			<div>
 				<h1>Bebidas</h1>
 			</div>
 		</section>
-		<section>
+		<section id="dulce">
 			<div>
 				<img src="" alt="dulces">
 			</div>
@@ -37,11 +35,37 @@ import Layout from "../layouts/Layout.astro"
 			top: 200px;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			left: 10%;
 		}
+		
+		section{
+			text-align: center;
+		}
+
+		#bebida{
+			background-image: url(../img/bebidas.png);
+			background-size: 250%;
+			border-radius: 5px;
+			width: 75%;
+			height: 70vh;
+			filter: sepia(90%);
+		}
+
+		#bebida:hover{
+			scale: 1.2;
+			box-shadow: 0 5px 5px black;
+			rotate: 5deg;
+		}
+
+		#bebida h1{
+			color: black;
+			animation: color;
+		}
+
+		@keyframes color 
 
 		div{
 			color: white;
+			text-align: center;
 		}
 
 	</style>
