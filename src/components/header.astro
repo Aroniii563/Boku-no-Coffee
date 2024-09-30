@@ -14,6 +14,10 @@ import Logo from "../img/logotipo.png";
                 <button><a href="/servicios">Servicios</a></button>
                 <button><a href="/contacto">Contacto</a></button>
             </nav>
+            <div class="data">
+                <button class="sign-in">Sign in</button>
+                <button class="sign-out">Sign out</button>
+            </div>
 		</header>
     </header>
 </body>
@@ -35,9 +39,9 @@ import Logo from "../img/logotipo.png";
     }
 
     .logo img{
-        width: 10%;
+        width: 13%;
         filter: drop-shadow(0 1px 2px #f08ae3);
-        margin-left: -30%;
+        margin-left: 20%;
         transition: rotate 0.5s ease-out;
     }
 
@@ -90,6 +94,85 @@ import Logo from "../img/logotipo.png";
         font-weight: bold;
     }
 
+    .data{
+        display: inline;
+        justify-content: center;
+        width: 30%;
+        margin: 15px 0 10px 40%;
+    }
+
+    .data button{
+        font-family: "Rajdhani", sans-serif;
+        padding: 5%;
+        width: 30%;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .sign-in{
+        background: linear-gradient(60deg, #9571ee, #725fd1);
+        border: 2px solid #cfadd5;
+        box-shadow: 0 5px 5px #725fd1;
+        color: white;
+    }
+
+    .sign-out{
+        background: linear-gradient(60deg, #725fd1, #6c3aea);
+        border: 2px solid #cfadd5;
+        box-shadow: 0 5px 5px #725fd1;
+        color: white;
+    }
+
+    .data button:hover{
+        cursor: grab;
+        scale: 1.1;
+    }
+
+    .sign-in:hover{
+        animation: scroll 0.7s ease-in-out;
+    }
+
+    .sign-out:hover{
+        animation: scroll2 0.7s ease-in-out;
+    }
+
+    @keyframes scroll{
+        0%{
+            background: linear-gradient(60deg, transparent, #9571ee, #725fd1);
+        }
+        25%{
+            background: linear-gradient(60deg, transparent 50%, #9571ee, #725fd1);
+        }
+        50%{
+            background: linear-gradient(60deg, transparent 75%, #9571ee, #725fd1);
+        }
+        75%{
+            background: transparent;
+        }
+        100%{
+            background: transparent;
+        }
+    }
+
+    @keyframes scroll2{
+        0%{
+            background: linear-gradient(60deg, transparent, #725fd1, #6c3aea);
+        }
+        25%{
+            background: linear-gradient(60deg, transparent 50%, #725fd1, #6c3aea);
+        }
+        50%{
+            background: linear-gradient(60deg, transparent 75%, #725fd1, #6c3aea);
+        }
+        75%{
+            background: transparent;
+        }
+        100%{
+            background: transparent;
+        }
+    }
+
     @media (width < 1700px) {
         .logo img{
             width: 5%;
@@ -112,7 +195,7 @@ import Logo from "../img/logotipo.png";
 
     @media (width > 2000px){
         .logo img{
-            margin-left: -50%;
+            margin-left: 20%;
         }
     }
 
