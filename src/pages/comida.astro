@@ -4,19 +4,19 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Comidas">
     <main>
-        <section>
+        <section id="select">
             <button></button>
             <button></button>
             <button></button>
             <button></button>
             <button></button>
         </section>
-        <section>
+        <section id="buttons">
             <button><a href="/comida">Comidas</a></button>
             <button><a href="/bebida">Bebidas</a></button>
             <button><a href="/dulce">Dulces</a></button>
         </section>
-        <section></section>
+        <section id="selection"></section>
     </main>
 
     <style>
@@ -26,7 +26,69 @@ import Layout from "../layouts/Layout.astro";
 
         main{
             position: relative;
-            top: 100px;
+            top: 80%;
+        }
+
+        #select{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 0 5px black;
+            width: 25%;
+            height: 90vh;
+            position: fixed;
+            z-index: 2;
+            background-color: #13151a;
+        }
+
+        #select button{
+            border: none;
+            margin: 40px;
+            padding: 10px;
+            background: linear-gradient(to right, #40084b 50%, #f08ae3);
+            border-radius: 10px;
+            transition: scale 0.3s ease-out, box-shadow 0.5s ease-in-out;
+        }
+
+        #select button:hover{
+            scale: 1.1;
+            box-shadow: -5px 5px 5px #cfadd5;
+        }
+
+        #select button a{
+            text-decoration: none;
+            font-family: "Rajdhani", sans-serif;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #buttons{
+            position: fixed;
+            left: 25%;
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        #buttons button{
+            background-color: #70f1ca;
+            border: none;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            width: 15%;
+        }
+
+        #buttons button:hover{
+            background-color: #5ac2a3;
+            
+        }
+
+        #buttons button a{
+            text-decoration: none;
+            font-family: "Rajdhani", sans-serif;
+            font-size: 35px;
         }
     </style>
 </Layout>
