@@ -5,21 +5,27 @@ import Botellas from "../img/bebidas.png";
 
 <Layout title="Productos">
 	<main>
-		<section id="comida">
-			<div>
-				<h1>Comidas</h1>
-			</div>
-		</section>
-		<section id="bebida">
-			<div>
-				<h1>Bebidas</h1>
-			</div>
-		</section>
-		<section id="dulce">
-			<div>
-				<h1>Postres y dulces</h1>
-			</div>
-		</section>
+		<a href="/comida">
+			<section id="comida">
+				<div>
+					<h1>Comidas</h1>
+				</div>
+			</section>
+		</a>
+		<a href="/bebida">
+			<section id="bebida">
+				<div>
+					<h1>Bebidas</h1>
+				</div>
+			</section>
+		</a>
+		<a href="/dulce">
+			<section id="dulce">
+				<div>
+					<h1>Postres y dulces</h1>
+				</div>
+			</section>
+		</a>
 	</main>
 
 	<style>
@@ -32,6 +38,12 @@ import Botellas from "../img/bebidas.png";
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			flex-wrap: wrap;
+		}
+
+		a{
+			text-decoration: none;
+			margin: 10px;
+			padding: 0;
 		}
 		
 		section{
@@ -81,6 +93,22 @@ import Botellas from "../img/bebidas.png";
 			height: 70vh;
 			filter: sepia(40%);
 			box-shadow: 10px 10px 0 #4fe543;
+			animation: open1 0.5s ease-out;
+		}
+
+		@keyframes open1{
+			0%{
+				translate: 0 20%;
+				opacity: 0;
+			}
+			50%{
+				translate: 0 10%;
+				opacity: 50%;
+			}
+			100%{
+				translate: 0;
+				opacity: 100%;
+			}
 		}
 
 		#bebida{
@@ -91,6 +119,22 @@ import Botellas from "../img/bebidas.png";
 			height: 70vh;
 			filter: sepia(60%);
 			box-shadow: 10px 10px 0 #FF5733;
+			animation: open2 0.75s ease-out;
+		}
+
+		@keyframes open2{
+			0%{
+				translate: 0 20%;
+				opacity: 0;
+			}
+			50%{
+				translate: 0 10%;
+				opacity: 50%;
+			}
+			100%{
+				translate: 0;
+				opacity: 100%;
+			}
 		}
 
 		#dulce{
@@ -101,13 +145,22 @@ import Botellas from "../img/bebidas.png";
 			height: 70vh;
 			filter: sepia(20%);
 			box-shadow: 10px 10px 0 #f65555;
+			animation: open3 1s ease-out;
 		}
 
-		@keyframes color 
-
-		div{
-			color: white;
-			text-align: center;
+		@keyframes open3{
+			0%{
+				translate: 0 20%;
+				opacity: 0;
+			}
+			50%{
+				translate: 0 10%;
+				opacity: 50%;
+			}
+			100%{
+				translate: 0;
+				opacity: 100%;
+			}
 		}
 
 	</style>

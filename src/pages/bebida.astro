@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Bebidas">
+    <main>
+        <section id="select">
+            <button><a href="#refrescos">Refrescos</a></button>
+            <button><a href="#te">Té</a></button>
+            <button><a href="#batidos">Batidos</a></button>
+            <button><a href="#alcohol">Alcohol</a></button>
+            <button><a href="#agua">Agua</a></button>
+        </section>
+        <section id="buttons">
+            <button><a href="/comida">Comidas</a></button>
+            <button><a href="/bebida">Bebidas</a></button>
+            <button><a href="/dulce">Dulces</a></button>
+        </section>
+        <section id="selection">
+            <div>
+                <h1 id="refrescos">Refrescos</h1>
+            </div>
+            <div>
+                <h1 id="te">Té</h1>
+            </div>
+            <div>
+                <h1 id="batidos">Batidos</h1>
+            </div>
+            <div>
+                <h1 id="alcohol">Alcohol</h1>
+            </div>
+            <div>
+                <h1 id="agua">Agua</h1>
+            </div>
+        </section>
+    </main>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        main{
+            position: relative;
+            top: 100px;
+        }
+
+        #select{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 0 5px black;
+            width: 25%;
+            height: 89vh;
+            position: fixed;
+        }
+
+        #select button{
+            border: none;
+            margin: 40px;
+            padding: 10px;
+            background: linear-gradient(to right, #40084b 50%, #f08ae3);
+            border-radius: 10px;
+            transition: scale 0.3s ease-out, box-shadow 0.5s ease-in-out;
+        }
+
+        #select button:hover{
+            scale: 1.1;
+            box-shadow: -5px 5px 5px #cfadd5;
+        }
+
+        #select button a{
+            text-decoration: none;
+            font-family: "Rajdhani", sans-serif;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+    </style>
+</Layout>
