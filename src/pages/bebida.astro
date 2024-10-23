@@ -7,6 +7,11 @@ import Nestea from "../img/bebidas/nestea-mango_piña.png";
 import Fanta from "../img/bebidas/fanta-naranja.png";
 import Lipton from "../img/bebidas/lipton.png";
 import Zero from "../img/bebidas/coca-zero.png";
+import Blanco from "../img/te/te-blanco.png";
+import Verde from "../img/te/te-verde.png";
+import Negro from "../img/te/te-negro.png";
+import Tila from "../img/te/tila.png";
+import Menta from "../img/te/menta-poleo.png";
 ---
 
 <Layout title="Bebidas">
@@ -23,7 +28,7 @@ import Zero from "../img/bebidas/coca-zero.png";
 				<img src={Fondo.src} alt="fondo">
 			</div>
 			<h1 class="visible">Bebidas</h1>
-            <div class="refrescos">
+            <div>
                 <h1 id="refrescos">Refrescos</h1>
                 <article>
                     <h2>Coca-Cola:</h2>
@@ -74,7 +79,7 @@ import Zero from "../img/bebidas/coca-zero.png";
                     <p>
                         4.30€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Blanco.src} alt="blanco">
                 </article>
                 <article>
                     <h2>Té Verde:</h2>
@@ -82,7 +87,7 @@ import Zero from "../img/bebidas/coca-zero.png";
                     <p>
                         4.85€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Verde.src} alt="verde">
                 </article>
                 <article>
                     <h2>Té Negro:</h2>
@@ -90,7 +95,7 @@ import Zero from "../img/bebidas/coca-zero.png";
                     <p>
                         5.50€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Negro.src} alt="negro">
                 </article>
                 <article>
                     <h2>Tila</h2>
@@ -98,7 +103,7 @@ import Zero from "../img/bebidas/coca-zero.png";
                     <p>
                         3.65€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Tila.src} alt="tila">
                 </article>
                 <article>
                     <h2>Menta Poleo:</h2>
@@ -106,7 +111,7 @@ import Zero from "../img/bebidas/coca-zero.png";
                     <p>
                         3.20€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Menta.src} alt="menta-poleo">
                 </article>
             </div>
             <div>
@@ -166,7 +171,7 @@ import Zero from "../img/bebidas/coca-zero.png";
         }
 
         .present img{
-		    width: 90%;
+		    width: 180%;
             filter: opacity(50%);
             position: relative;
 		    z-index: 0;
@@ -195,7 +200,7 @@ import Zero from "../img/bebidas/coca-zero.png";
 
         .visible{
 		    position: absolute;
-		    top: 6%;
+		    top: 7%;
 		    left: 25%;
 		    color: white;
 		    font-size: 150px;
@@ -219,9 +224,6 @@ import Zero from "../img/bebidas/coca-zero.png";
 
         #selection div{
             margin-bottom: 20%;
-        }
-
-        .refrescos {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             flex-wrap: wrap;
