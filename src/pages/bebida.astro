@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Fondo from "../img/logotipo.png";
 import Contacto from "./contacto.astro";
 import Coca from "../img/bebidas/coca-cola.png";
+import Nestea from "../img/bebidas/nestea-mango_piña.png";
+import Fanta from "../img/bebidas/fanta-naranja.png";
+import Lipton from "../img/bebidas/lipton.png";
+import Zero from "../img/bebidas/coca-zero.png";
 ---
 
 <Layout title="Bebidas">
@@ -19,7 +23,7 @@ import Coca from "../img/bebidas/coca-cola.png";
 				<img src={Fondo.src} alt="fondo">
 			</div>
 			<h1 class="visible">Bebidas</h1>
-            <div>
+            <div class="refrescos">
                 <h1 id="refrescos">Refrescos</h1>
                 <article>
                     <h2>Coca-Cola:</h2>
@@ -35,7 +39,7 @@ import Coca from "../img/bebidas/coca-cola.png";
                     <p>
                         1.90€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Nestea.src} alt="nestea">
                 </article>
                 <article>
                     <h2>Fanta Naranja:</h2>
@@ -43,7 +47,7 @@ import Coca from "../img/bebidas/coca-cola.png";
                     <p>
                         2.00€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Fanta.src} alt="fanta">
                 </article>
                 <article>
                     <h2>Lipton:</h2>
@@ -51,7 +55,7 @@ import Coca from "../img/bebidas/coca-cola.png";
                     <p>
                         1.50€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Lipton.src} alt="lipton">
                 </article>
                 <article>
                     <h2>Coca-Cola Zero:</h2>
@@ -59,7 +63,7 @@ import Coca from "../img/bebidas/coca-cola.png";
                     <p>
                         2.15€
                     </p>
-                    <div id="imagen"></div>
+                    <img src={Zero.src} alt="zero">
                 </article>
             </div>
             <div>
@@ -191,7 +195,7 @@ import Coca from "../img/bebidas/coca-cola.png";
 
         .visible{
 		    position: absolute;
-		    top: 20%;
+		    top: 6%;
 		    left: 25%;
 		    color: white;
 		    font-size: 150px;
@@ -207,9 +211,38 @@ import Coca from "../img/bebidas/coca-cola.png";
             font-family: "Rajdhani", sans-serif;
         }
 
+        #selection div h1{
+            grid-column: 1 / -1;
+            font-size: 50px;
+            text-decoration: underline;
+        }
+
+        #selection div{
+            margin-bottom: 20%;
+        }
+
+        .refrescos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-wrap: wrap;
+        }
+
+        article{
+            margin: 10%;
+            padding: 10%;
+            background-color: black;
+            box-shadow: 1px 1px 5px white;
+            border-radius: 15px;
+            transition: scale 0.2s ease-out;
+        }
+
+        article:hover{
+            scale: 1.1;
+        }
+
         article img{
-            float: left;
-            width: 20%;
+            width: 75%;
+            filter: drop-shadow(2.5px 5px 2px #3b3d3d);
         }
 
     </style>
